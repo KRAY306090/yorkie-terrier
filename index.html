@@ -9,10 +9,20 @@
 <body>
     <h1></h1>
     <h2>Please enter the breed name.</h2>
-    <p>If you are not sure about the exact name of the breed, you can enter as little as few letters. For example "lab" and choose from the list</p>
+    <p id="modaltext"></p>
     <div><input type="text" id="searchTerm" value="" /></div>
     <button onclick="myFunction()">Search!</button>
+
+    <!-- each search result set new div in this container with class "new-div"-->
     <div id="response-container"></div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+<p>Could not find anything. Please change the name and try again</p>
+    </div>
+</div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

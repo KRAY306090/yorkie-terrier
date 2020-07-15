@@ -8,7 +8,7 @@ function myFunction() {
     var node = document.getElementById("response-container");
     node.querySelectorAll('*').forEach(n => n.remove());
 
-//input value
+    //input value
     breed = document.querySelector('#searchTerm').value;
 
     fetch(
@@ -20,9 +20,10 @@ function myFunction() {
         .then(function (response) {
             console.log(response);
 
-            // if nothing found need a massage here(console.log for now)
+            // if nothing found show the modal message
             if (response.length === 0) {
-                console.log('Could not find anything for that.');
+                var message = "If you are not sure about the exact name of the breed, you can enter as little as few letters. For example *lab* and choose from the list"
+                callModal(message);
             }
             //add new div elements to html DOM 
             else {
@@ -44,6 +45,25 @@ function myFunction() {
                 }
                 divparent.addEventListener("click", saveBreed, false);
 
+            }
+            //show modal message 
+            // just call it if you need an alert and pass string message as a parameter
+            function callModal(value) {
+                var messagecontainer = document.getElementById("modaltext");
+                messagecontainer.innertext = value;
+                var modal = document.getElementById("myModal");
+                var span = document.getElementsByClassName("close")[0];
+                //show modal
+                modal.style.display = "block";
+                //hide modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
             }
         });
 
