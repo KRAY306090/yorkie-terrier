@@ -1,4 +1,6 @@
-
+.search-wrapper {
+  display: none;
+}
 /* modal message section */
 .modal {
     display: none; 

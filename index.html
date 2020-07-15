@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Search</title>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-    <h1></h1>
-    <h2>Please enter the breed name.</h2>
-    <p id="modaltext"></p>
-    <div><input type="text" id="searchTerm" value="" /></div>
-    <button onclick="myFunction()">Search!</button>
+    <!--Search page start-->
+    <div class="search-wrapper">
+        <h1>Dog Search</h1>
+        <h2>Please enter the breed name.</h2>
+        <p id="modaltext"></p>
+        <div><input type="text" id="searchTerm" value="" /></div>
+        <button onclick="myFunction()">Search!</button>
 
-    <!-- each search result set new div in this container with class "new-div"-->
-    <div id="response-container"></div>
+        <!-- each search result set new div in this container with class "new-div"-->
+        <div id="response-container"></div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-<p>Could not find anything. Please change the name and try again</p>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Could not find anything. Please change the name and try again</p>
+            </div>
+        </div>
     </div>
-</div>
+    <!-- Search page end -->
+    <!-- Bio page start -->
+    <div class="bio-wrapper">
+        <div class="section">
+            <h1>Dog name here</h1>
+        </div>
+        <div class="section">
+            <div class="column">
+                <div class="section">
+                    <div class="column">
+                        <!-- picture here -->
+                    </div>
+                    <div class="column">
+                        <!-- video here -->
+                    </div>
+                </div>
+                <div class="section">
+                    <!--stats card here -->
+                </div>
+            </div>
+            <div class="column">
+                <!-- see similar breeds list card -->
+            </div>
+        </div>
+
+    </div>
+    <!-- Bio page end -->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
