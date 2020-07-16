@@ -1,6 +1,9 @@
 /* hides content */
-.search-wrapper {
+.bio-wrapper {
   display: none;
+}
+.navbar {
+  margin: 0px, 0px;
 }
 /* modal message section */
 .modal {
