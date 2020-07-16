@@ -18,7 +18,7 @@ console.log(breedobject.name)
 
 });
 
-var getList = function() {
+window.addEventListener('DOMContentLoaded', function () {
     fetch(
         `https://api.thedogapi.com/v1/breeds?api_key=74a8d6a7-fb77-4451-999a-01a85de265cc`
         )
@@ -29,10 +29,10 @@ var getList = function() {
             randomIndex = Math.floor(Math.random() * 172);
             var listName = data[randomIndex]["name"];
             var listItem = document.createElement("li");
-            listItem.innerHTML = listName;
+            listItem.innerHTML = "<i class='fa fa-paw' aria-hidden='true'></i> " + listName;
             breedListEl.appendChild(listItem);
 
         }
     })
-};
+});
 
