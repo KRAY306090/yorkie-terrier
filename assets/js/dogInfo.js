@@ -1,3 +1,4 @@
+var breedListEl = document.querySelector("#breedList")
 // set all info to the page on load
 window.addEventListener('DOMContentLoaded', function () {
     //pull object from session storage
@@ -24,6 +25,14 @@ var getList = function() {
     .then(response => response.json())
     .then(data => {
         console.log(data)
+        for (var i = 0; i < 10; i++) {
+            randomIndex = Math.floor(Math.random() * 172);
+            var listName = data[randomIndex]["name"];
+            var listItem = document.createElement("li");
+            listItem.innerHTML = listName;
+            breedListEl.appendChild(listItem);
+
+        }
     })
 };
 
