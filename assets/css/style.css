@@ -36,3 +36,54 @@
     cursor: pointer;
   }
   
+
+  .search-wrapper{
+    position: absolute;
+    border-radius: 50%;
+    width: 350px;
+    height: 150px;
+    margin-left: 60%;
+    margin-top: 20px;
+    /* margin-top: %; */
+    text-align: center;
+    font-family:cursive;
+    background-color: rgb(10, 227, 243);
+    /* background-image: url('../images/tree4.jpg'); */
+    /* background-position :  center/cover;    */
+    color:rgb(202, 1, 1);
+    font-size: 20pt;
+    font-weight: 2000;
+               
+  }
+        
+            
+  .hero{
+               
+    background-image:url('../images/dog-tales-img.jpg'); 
+    background-position :  center/cover;  
+                 
+  }
+
+  #response-container{
+    margin-top: 30px;
+    position: absolute;
+    height: 240px;
+    width: 250px;
+      max-height: 13em;
+     overflow: auto; 
+     margin-left: 50px;
+     
+    }
+    .new-div{
+      color: rgb(20, 0, 110);
+      font-weight: 600;
+      
+    }
+
+    #searchTerm{
+      width: 200px;
+      height: 35px;
+      font-size: 20pt;
+      background-color: yellow;
+    }
+             

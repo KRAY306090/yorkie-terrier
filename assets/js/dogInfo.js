@@ -14,8 +14,11 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
 // For Mike to use
-console.log(breedobject.name)
+    console.log(breedobject.name)
+    var breed = breedobject.name
+    console.log(breed)
 
+    videoSearch(apiKey, breed, 2)
 });
 var newBreed = function(data, index) {
     console.log(data);
@@ -47,4 +50,25 @@ window.addEventListener('DOMContentLoaded', function () {
     
 });
 
+
+
+
+var apiKey = "AIzaSyD7nrLoufr8z3u4tc3PrAogdFA8EHy3ufI"
+var video = ""
+
+var videoSearch = function(key, search, maxResults){
+   $("#videos").empty 
+   $.get("https://www.googleapis.com/youtube/v3/search?key="+ key
+        + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search, function(data){
+            console.log(data)
+
+        data.items.forEach(item => {
+            video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder = "0" allowfullscreen></iframe>
+            `
+        console.log(video)
+
+         $("#videos").append(video)
+        })
+        })
+    }
 
