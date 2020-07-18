@@ -5,6 +5,10 @@
 // this function runs on click of the search button
 function myFunction() {
 
+    var emptyinput = document.getElementById('searchTerm');
+if (emptyinput.value === ""){
+    return;
+}
     // if new search clicked remove previous search items
     var node = document.getElementById("response-container");
     node.querySelectorAll('*').forEach(n => n.remove());
@@ -29,7 +33,7 @@ function myFunction() {
             //add new div elements to html DOM 
             else {
                 a = response;
-                for (var i = 0; i < response.length && i < 5; i++) {
+                for (var i = 0; i < response.length; i++) {
                     var newdiv = document.createElement("DIV");
                     newdiv.setAttribute("class", "new-div");
                     newdiv.setAttribute("id", i.toString());
