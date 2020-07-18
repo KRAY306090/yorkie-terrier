@@ -17,6 +17,11 @@ window.addEventListener('DOMContentLoaded', function () {
 console.log(breedobject.name)
 
 });
+var newBreed = function(data, index) {
+    console.log(data);
+    console.log(index);
+}
+
 
 window.addEventListener('DOMContentLoaded', function () {
     fetch(
@@ -24,15 +29,21 @@ window.addEventListener('DOMContentLoaded', function () {
         )
     .then(response => response.json())
     .then(data => {
-        console.log(data)
-        for (var i = 0; i < 10; i++) {
+        
+        for (var i = 0; i < 15; i++) {
             randomIndex = Math.floor(Math.random() * 172);
             var listName = data[randomIndex]["name"];
             var listItem = document.createElement("li");
-            listItem.innerHTML = "<i class='fa fa-paw' aria-hidden='true'></i> " + listName;
+            listItem.setAttribute("id", randomIndex);
+            
+            listItem.innerHTML = "<button class='button'>" + listName + "</button>";
             breedListEl.appendChild(listItem);
+            
 
         }
+        
     })
+    listItem.addEventListener("click", newBreed(data, listItem.id))
 });
+
 
