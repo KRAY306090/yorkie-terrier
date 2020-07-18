@@ -34,7 +34,7 @@ var videoSearch = function(key, search, maxResults){
             `
         console.log(video)
 
-            // $("videos").append(video)
+         $("#videos").append(video)
         })
         })
     }
