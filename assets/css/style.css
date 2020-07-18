@@ -35,3 +35,13 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+#response-container{
+  position: relative;
+  height: 200px;
+  width: 250px;
+    max-height: 13em;
+   overflow: auto; 
+  }
+
+  
