@@ -35,3 +35,24 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  .search-wrapper{
+    
+    text-align: center;
+    font-family:cursive;
+    background-image: url('../images/tree4.jpg');
+    background-position :  center/cover;   
+    color:black;
+    font-size: larger;
+    font-weight: 2000;
+               
+  }
+        
+            
+  .hero{
+               
+    background-image:url('../images/dog-tales-img.jpg'); 
+    background-position :  center/cover;  
+                 
+  }
+             
