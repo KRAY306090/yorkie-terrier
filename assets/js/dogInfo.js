@@ -38,12 +38,13 @@ window.addEventListener('DOMContentLoaded', function () {
             
             listItem.innerHTML = "<button class='button'>" + listName + "</button>";
             breedListEl.appendChild(listItem);
+            listItem.addEventListener("click", newBreed(data, listItem.id))
             
 
         }
         
     })
-    listItem.addEventListener("click", newBreed(data, listItem.id))
+    
 });
 
 
