@@ -74,18 +74,24 @@ var apiKey = "AIzaSyD7nrLoufr8z3u4tc3PrAogdFA8EHy3ufI"
 var video = ""
 
 var videoSearch = function (key, search, maxResults) {
-    $("#videos").empty
-    $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
-        + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
-            // console.log(data)
+    // $("#videos").empty
+    // $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
+    //     + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
+    //         // console.log(data)
 
-            data.items.forEach(item => {
-                video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder = "0" allowfullscreen></iframe>
-            `
+    //         data.items.forEach(item => {
+                // video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder = "0" allowfullscreen></iframe>
+            // `
+
                 // console.log(video)
+                
 
+                //video placement
+                video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
+                video2 = `<iframe width="480" height="320" src="http://www.youtube.com/embed/KiP4jwiTazI" frameborder = "0" allowfullscreen></iframe>`  
                 $("#videos").append(video)
-            })
-        })
+                $("#videos").append(video2)
+            // })
+        // })
 }
 
