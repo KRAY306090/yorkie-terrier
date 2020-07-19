@@ -90,7 +90,7 @@ var videoSearch = function (key, search, maxResults) {
                 video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
                 video2 = `<iframe width="480" height="320" src="http://www.youtube.com/embed/KiP4jwiTazI" frameborder = "0" allowfullscreen></iframe>`  
                 $("#videos").append(video)
-                $("#videos").append(video2)
+                $("#video2").append(video2)
             // })
         // })
 }
