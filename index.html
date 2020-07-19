@@ -6,24 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Search</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+    <header class="nav-bar">
+        <div id="sitename"> Doggypedia</div>
+    </header>
     <!--Search page start-->
-     <div class="search-wrapper">
-     <!-- style="background-image: url('assets/images/tree4.jpg')" -->
+    <div class="search-wrapper">
+        <!-- style="background-image: url('assets/images/tree4.jpg')" -->
         <h1>Dog Search</h1>
-        <h2>Please enter the breed name.</h2>
+        <h2>Please enter the breed.</h2>
         <p id="modaltext"></p>
         <div><input type="text" oninput="myFunction()" id="searchTerm" value="" /></div>
-        
+
         <!-- each search result set new div in this container with class "new-div"-->
         <div id="response-container"></div>
 
@@ -36,11 +35,16 @@
         </div>
     </div>
     <!-- Search page end -->
-    
-    <!--hero body -->
- <section class="hero is-fullheight"> 
 
-</section> 
+    <!--hero body -->
+    <section class="picture-container">
+        <!-- <div class="hero">
+        </div> -->
+        <img id="dogs-image" src="assets/images/dog-tales-img.jpg" alt="">
+    </section>
+    <footer class="footer-bar">
+project#1
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 
