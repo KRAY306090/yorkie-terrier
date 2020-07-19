@@ -1,89 +1,121 @@
 /* modal message section */
+
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; 
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-  .search-wrapper{
-    position: absolute;
-    border-radius: 50%;
-    width: 350px;
-    height: 150px;
-    margin-left: 60%;
-    margin-top: 20px;
-    /* margin-top: %; */
-    text-align: center;
-    font-family:cursive;
-    background-color: rgb(10, 227, 243);
-    /* background-image: url('../images/tree4.jpg'); */
-    /* background-position :  center/cover;    */
-    color:rgb(202, 1, 1);
-    font-size: 20pt;
-    font-weight: 2000;
-               
-  }
-        
-            
-  .hero{
-               
-    background-image:url('../images/dog-tales-img.jpg'); 
-    background-position :  center/cover;  
-                 
-  }
+/* Modal Content/Box */
 
-  #response-container{
-    margin-top: 30px;
-    position: absolute;
-    height: 240px;
-    width: 250px;
-      max-height: 13em;
-     overflow: auto; 
-     margin-left: 50px;
-     
-    }
-    .new-div{
-      color: rgb(20, 0, 110);
-      font-weight: 600;
-      
-    }
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-    #searchTerm{
-      width: 200px;
-      height: 35px;
-      font-size: 20pt;
-      background-color: yellow;
-    }
-             
+/* The Close Button */
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search-wrapper {
+  padding-top: 5px;
+  line-height: 1.2;
+  font-family: fantasy;
+  position: absolute;
+  margin: 14px;
+  width: 27%;
+  height: fit-content;
+  margin-right: 0;
+  border-radius: 10px;
+  text-align: center;
+  font-family: cursive;
+  color: rgb(59, 59, 59);
+  font-size: 20pt;
+  font-weight: 2000;
+  background-color: lightgray;
+}
+
+.nav-bar {
+  font-weight: 500;
+  position: sticky;
+  font-size: 40pt;
+  height: 90px;
+  background-color: #00d1b2;
+  border-bottom: solid 2px lightgray;
+  text-align: center;
+  color: white;
+  padding-top: 0;
+}
+
+#response-container {
+  text-justify: auto;
+  font-family: serif;
+  margin-top: 10px;
+  position: absolute;
+  height: 350px;
+  width: 92%;
+  max-height: 13em;
+  overflow: auto;
+  margin-left: 10px;
+}
+
+.new-div {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  border: solid rgb(92, 92, 92) 0.5px;
+  border-radius: 5px;
+  background-color: lightyellow;
+}
+
+#searchTerm {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 80%;
+  height: 35px;
+  font-size: 20pt;
+  /* background-color: yellow;  */
+}
+
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #00d1b2;
+  height: 50px;
+  width: 100%;
+}
+
+.picture-container {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  background-image: url('../images/tree4.jpg');
+}
+
+#dogs-image {
+  position: absolute;
+  margin-right: 20px;
+}
