@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
     var breed = breedobject.name
     // console.log(breed)
 
-    videoSearch(apiKey, breed, 2)
+    videoSearch(apiKey, breed, 1)
 });
 
 
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(function (data) {
-            // console.log(data);
+            console.log(data);
 
             for (var i = 0; i < 10; i++) {
                 randomIndex = Math.floor(Math.random() * 172);
@@ -76,7 +76,7 @@ var video = ""
 var videoSearch = function (key, search, maxResults) {
     $("#videos").empty
     $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
-        + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search, function (data) {
+        + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
             // console.log(data)
 
             data.items.forEach(item => {
