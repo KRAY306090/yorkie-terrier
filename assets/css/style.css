@@ -62,7 +62,7 @@
   font-size: 40pt;
   height: 90px;
   background-color: #00d1b2;
-  border-bottom: solid 2px lightgray;
+  border-bottom: solid 4px lightgray;
   text-align: center;
   color: white;
   padding-top: 0;
@@ -105,6 +105,7 @@
   background-color: #00d1b2;
   height: 50px;
   width: 100%;
+  border-top: solid 3px lightgray;
 }
 
 .picture-container {
@@ -118,4 +119,18 @@
 #dogs-image {
   position: absolute;
   margin-right: 20px;
+  border-left: solid 2px lightgray; 
+}
+
+.random-dog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black 1px;
+  border-radius: 5px;
+  margin: 5px;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 80%;
 }
