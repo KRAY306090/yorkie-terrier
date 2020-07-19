@@ -51,6 +51,7 @@ if (emptyinput.value === ""){
                      sessionStorage.clear();
                     element.target.style.color = 'red'
                     var targetindex = Number(element.target.id);
+                    console.log(element);
                     sessionStorage.setItem('breedinfo', JSON.stringify(response[targetindex]));
 
                     window.location.href = "./doginfo.html";
