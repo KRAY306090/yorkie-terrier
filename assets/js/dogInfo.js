@@ -61,6 +61,24 @@ window.addEventListener('DOMContentLoaded', function () {
             }
 
         })
+        var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
+        var fulldogname = breedobject.name.split(' ').join('%20')
+        console.log(fulldogname);
+    fetch(
+        "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=1&prop=pageimages%7Cextracts&pilimit=20&exintro=5&explaintext=4&exsentences=4&exlimit=max&origin=*&gsrsearch=" + fulldogname
+
+    )
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (response) {
+            var keys = Object.keys(response.query.pages);
+            var a = response.query.pages[keys[0]].thumbnail.source;
+            var b = response.query.pages[keys[0]].extract;
+            console.log(typeof b);
+            document.getElementById('dogimage').setAttribute("src", a);
+            document.getElementById('dogtext').innerText = b;
+        })
 
 
 });
