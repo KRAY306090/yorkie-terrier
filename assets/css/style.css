@@ -37,6 +37,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+.page-content {
+  background-image: url("/assets/images/dog-tales-img.jpg");
+}
 
 .search-wrapper {
   padding-top: 5px;
@@ -110,14 +113,6 @@
   height: 50px;
   width: 100%;
   border-top: solid 3px lightgray;
-}
-
-.picture-container {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 70%;
-  background-image: url('../images/tree4.jpg');
 }
 
 #dogs-image {
