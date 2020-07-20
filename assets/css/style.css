@@ -37,11 +37,9 @@
   text-decoration: none;
   cursor: pointer;
 }
-.page-content {
-  background-image: url("/assets/images/dog-tales-img.jpg");
-}
 
-.search-wrapper {
+
+ /* .search-wrapper {
   padding-top: 5px;
   line-height: 1.2;
   font-family: fantasy;
@@ -57,7 +55,8 @@
   font-size: 20pt;
   font-weight: 2000;
   background-color: lightgray;
-}
+
+} */
 
 
 /* .nav-bar {
@@ -73,28 +72,35 @@
 }
 */
 
-#response-container {
+/* #response-container {
   text-justify: auto;
   font-family: serif;
   margin-top: 10px;
-  position: absolute;
+  position: absolute; 
   height: 350px;
   width: 92%;
   max-height: 13em;
   overflow: auto;
   margin-left: 10px;
 }
+*/
+#response-container {
+  max-height: 13rem;
+  overflow: auto;
+}
 
 
 
-.new-div {
-  width: 100%;
+ /* .new-div {
+  width: 75%;
   color: rgb(0, 0, 0);
   font-weight: 300;
   border: solid rgb(92, 92, 92) 0.5px;
   border-radius: 5px;
   background-color: lightyellow;
 }
+*/
+
 
 #searchTerm {
   margin-bottom: 10px;
@@ -102,8 +108,8 @@
   width: 80%;
   height: 35px;
   font-size: 20pt;
-  /* background-color: yellow;  */
 }
+
 
 .footer-bar {
   position: fixed;

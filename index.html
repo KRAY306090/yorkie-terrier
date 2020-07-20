@@ -18,17 +18,23 @@
     </header>
     
     <!--Search page start-->
-    <div class="page-content">
-    <div class="search-wrapper">
-        <!-- style="background-image: url('assets/images/tree4.jpg')" -->
-        <h1>Dog Search</h1>
-        <h2>Please enter the breed.</h2>
+    <div class="tile is vertical is-ancestor">
+    <div class="tile is-4 is-parent">
+        <div class="tile is-child box has-text-centered">
+    
+        <p class="title">Dog Search</p>
+        <p class="subtitle">Please enter the breed.</p>
         <p id="modaltext"></p>
         <div><input type="text" oninput="myFunction()" id="searchTerm" value="" /></div>
-
+    </div>
+    </div>
+    <div class="tile is-4 is-parent">
+        
         <!-- each search result set new div in this container with class "new-div"-->
-        <div id="response-container"></div>
-
+        <div class="tile is-child has-text-centered" id="response-container"></div>
+    
+    </div>
+    </div>
         <!-- The Modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
@@ -36,13 +42,13 @@
                 <p>Could not find anything. Please change the name and try again</p>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     <!-- <section class="picture-container column">
         
         <img id="dogs-image" src="assets/images/dog-tales-img.jpg" alt="">
     </section>
 -->
-</div>
+
     <footer class="footer-bar">
 project#1
     </footer>
