@@ -80,6 +80,8 @@
   margin-left: 10px;
 }
 
+
+
 .new-div {
   width: 100%;
   color: rgb(0, 0, 0);
@@ -133,4 +135,29 @@
   width: 100%;
   text-align: center;
   font-size: 80%;
+}
+
+#dogtext{
+width: 300px;
+margin: 10px;
+
+
+   /* margin-top: 10px;
+  position: relative; */
+  /* max-height: 13em;
+  overflow: auto;  */
+}
+
+#dogimage{
+float: left;
+width: 100px;
+margin: 10px;
+}
+
+#dogtext-container{
+   margin-top: 50px; 
+  max-height: 20em;
+  overflow: auto;  
+border: solid gray 1px;
+width: fit-content;
 }
