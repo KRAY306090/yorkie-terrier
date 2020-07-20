@@ -113,13 +113,15 @@ var videoSearch = function (key, search, maxResults) {
                 video = `<iframe width="800" height="480" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
          
                 $("#videos").append(video)
+
+                resultsLoop()
             // })
         // })
 }
 
 var resultsLoop = function(data) {
 
-    $.each(data.items, function(i, item){
+    // $.each(data.items, function(i, item){
 
         var thumb = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insider.com%2Fmost-popular-dog-breeds-2019-google-search&psig=AOvVaw2z8IDhLdAw2TjhDayq-Y0w&ust=1595359798820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjlq8PI3OoCFQAAAAAdAAAAABAJ" //item.snippet.thumbnail.medium.url; // change src
         var title = "Title" //item.snippet.title; //change in h4 tags
@@ -136,5 +138,5 @@ var resultsLoop = function(data) {
             </article>                    
             `
         )
-    })
+    // })
 }
