@@ -56,7 +56,8 @@
   background-color: lightgray;
 }
 
-.nav-bar {
+
+/* .nav-bar {
   font-weight: 500;
   position: sticky;
   font-size: 40pt;
@@ -67,6 +68,7 @@
   color: white;
   padding-top: 0;
 }
+*/
 
 #response-container {
   text-justify: auto;
