@@ -1,4 +1,7 @@
 /* modal message section */
+body {
+  background-image: url("../images/tree4.jpg");
+}
 
 .modal {
   display: none;
@@ -88,6 +91,10 @@
   max-height: 13rem;
   overflow: auto;
 }
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 
 
 
@@ -109,8 +116,13 @@
   height: 35px;
   font-size: 20pt;
 }
+.opacity-low {
+  background-color: rgba(0, 209, 178, 0.9);
+  border: solid 1px black;
+  
+}
 
-
+/*
 .footer-bar {
   position: fixed;
   bottom: 0;
@@ -120,6 +132,7 @@
   width: 100%;
   border-top: solid 3px lightgray;
 }
+*/
 
 #dogs-image {
   position: absolute;
