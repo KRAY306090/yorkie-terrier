@@ -75,7 +75,8 @@ window.addEventListener('DOMContentLoaded', function () {
             var keys = Object.keys(response.query.pages);
             var a = response.query.pages[keys[0]].thumbnail.source;
             var b = response.query.pages[keys[0]].extract;
-            console.log(typeof b);
+            console.log(a)
+            console.log(b);
             document.getElementById('dogimage').setAttribute("src", a);
             document.getElementById('dogtext').innerText = b;
         })

@@ -29,33 +29,6 @@
         <div class="columns">
             <div class="column is-9">
                 <div class="section level columns">
-                    <div class="column is-5">
-                        <!-- picture here -->
-                        <div id="dogtext-container">
-                        <div id="dogimage-container">
-                            <img id="dogimage"  class="is-rounded" src="https://bulma.io/images/placeholders/256x256.png">
-                        </div>
-                            <p id="dogtext">
-                            </p>
-                        </div>
-                        <figure  class="image is-128x128">
-                            
-                        </figure>
-                        
-                    </div>
-                    <div class="column is-6">
-                        <!-- video here -->
-                        <div class="card">
-                            <h3 class="card-header">Stats</h3>
-                            <div class="card-content">
-                                <p id="height"></p>
-                                <p id="weight"></p>
-                                <p id="lifespan"></p>
-                                <p id="temperament"></p>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
                 <div class="section columns is-2">
                     <div class="column is-6" id = "videos">
@@ -71,8 +44,28 @@
                 </div>
             </div>
             <div class="column is-3 section">
+                <!-- Wikipedia Content -->   
+                <div class = "card">
+                    <div class = "is-size-5 card-header level" id = "info-card"> </div>
+                    <div class = "card-content" id="doginfo-container">
+                        <img id="dogimage">
+
+                    </img>
+                        <p id="dogtext"></p>
+                    </div>
+                </div>
+                <!-- Stats -->
                 <div class="card">
-                    <!-- see similar breeds list -->
+                    <h2 class="is-size-5 card-header level">Stats</h2>
+                    <div class="card-content">
+                        <p id="height"></p>
+                        <p id="weight"></p>
+                        <p id="lifespan"></p>
+                        <p id="temperament"></p>
+                    </div>
+                </div>
+                <!-- Other Breeds List -->
+                <div class="card">
                     <h2 class="is-size-5 card-header level"><i class='fa fa-paw' aria-hidden='true'></i> Discover other Breeds <i
                             class='fa fa-paw' aria-hidden='true'></i></h2>
 
