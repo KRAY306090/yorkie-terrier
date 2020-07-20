@@ -1,5 +1,7 @@
 function searchCursor() {
+    document.getElementById('searchTerm').value = "";
     document.getElementById('searchTerm').focus();
+
 }
 
 // this function runs on click of the search button
