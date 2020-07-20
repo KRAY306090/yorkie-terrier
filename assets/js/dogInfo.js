@@ -75,7 +75,9 @@ window.addEventListener('DOMContentLoaded', function () {
             var keys = Object.keys(response.query.pages);
             var a = response.query.pages[keys[0]].thumbnail.source;
             var b = response.query.pages[keys[0]].extract;
-            console.log(typeof b);
+            console.log(a)
+            console.log(b);
+            document.getElementById('info-card').innerText = fulldogname
             document.getElementById('dogimage').setAttribute("src", a);
             document.getElementById('dogtext').innerText = b;
         })
@@ -105,11 +107,36 @@ var videoSearch = function (key, search, maxResults) {
                 
 
                 //video placement
-                video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
-                video2 = `<iframe width="480" height="320" src="http://www.youtube.com/embed/KiP4jwiTazI" frameborder = "0" allowfullscreen></iframe>`  
+
+   
+
+                video = `<iframe width="800" height="480" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
+         
                 $("#videos").append(video)
-                $("#video2").append(video2)
+
+                resultsLoop()
             // })
         // })
 }
 
+var resultsLoop = function(data) {
+
+    // $.each(data.items, function(i, item){
+
+        var thumb = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insider.com%2Fmost-popular-dog-breeds-2019-google-search&psig=AOvVaw2z8IDhLdAw2TjhDayq-Y0w&ust=1595359798820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjlq8PI3OoCFQAAAAAdAAAAABAJ" //item.snippet.thumbnail.medium.url; // change src
+        var title = "Title" //item.snippet.title; //change in h4 tags
+        var desc = "I am a description" //item.snippet.description.substring(0,100) //change in p tag
+
+
+        $('main').append(
+            ` <article>
+                <img src="${thumb}" atl="" class = "thumb">
+                <div class = "details">
+                    <h4>${title}</h4>
+                    <p>${desc}</p>
+                </div>
+            </article>                    
+            `
+        )
+    // })
+}
