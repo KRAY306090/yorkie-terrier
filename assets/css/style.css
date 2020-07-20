@@ -78,6 +78,7 @@
   max-height: 13em;
   overflow: auto;
   margin-left: 10px;
+  border-bottom: 1px solid gray;
 }
 
 
@@ -89,6 +90,7 @@
   border: solid rgb(92, 92, 92) 0.5px;
   border-radius: 5px;
   background-color: lightyellow;
+  margin-bottom: 3px;
 }
 
 #searchTerm {
