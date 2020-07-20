@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body onload= "searchCursor()">
     <header class="nav-bar">
         <div id="sitename"> Doggypedia</div>
     </header>
@@ -20,7 +20,7 @@
         <!-- style="background-image: url('assets/images/tree4.jpg')" -->
         <h1>Dog Search</h1>
         <h2>Please enter the breed.</h2>
-        <p id="modaltext"></p>
+        <p></p>
         <div><input type="text" oninput="myFunction()" id="searchTerm" value="" /></div>
 
         <!-- each search result set new div in this container with class "new-div"-->
@@ -30,7 +30,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Could not find anything. Please change the name and try again</p>
+                <p id="modaltext" >Could not find anything. Please change the name and try again</p>
             </div>
         </div>
     </div>

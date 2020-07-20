@@ -3,7 +3,7 @@ var breedListEl = document.querySelector("#breedList")
 window.addEventListener('DOMContentLoaded', function () {
     //pull object from session storage
     var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-    // console.log(breedobject);
+    
     // fill dog info area
     document.getElementById('dogname').innerText = breedobject.name;
     document.getElementById('height').innerText = "Height: " + breedobject.height.imperial + " inches";
@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', function () {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
     // For Mike to use
-    // console.log(breedobject.name)
+    
     var breed = breedobject.name
-    // console.log(breed)
+    
 
     videoSearch(apiKey, breed, 1)
 });
@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+          
 
             for (var i = 0; i < 10; i++) {
                 randomIndex = Math.floor(Math.random() * 172);
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
                     sessionStorage.clear();
                     element.target.style.color = 'red'
                     var targetindex = Number(element.target.id);
-                    console.log(element);
+                    
                     sessionStorage.setItem('breedinfo', JSON.stringify(data[targetindex]));
 
                     window.location.href = "./doginfo.html";
@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', function () {
         })
         var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
         var fulldogname = breedobject.name.split(' ').join('%20')
-        console.log(fulldogname);
+       
     fetch(
         "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=1&prop=pageimages%7Cextracts&pilimit=20&exintro=5&explaintext=4&exsentences=4&exlimit=max&origin=*&gsrsearch=" + fulldogname
 
@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', function () {
             var keys = Object.keys(response.query.pages);
             var a = response.query.pages[keys[0]].thumbnail.source;
             var b = response.query.pages[keys[0]].extract;
-            console.log(typeof b);
+            
             document.getElementById('dogimage').setAttribute("src", a);
             document.getElementById('dogtext').innerText = b;
         })

@@ -1,6 +1,6 @@
-// variable to use in the next fetch request
-//var dogbreed = "";
-
+function searchCursor() {
+    document.getElementById('searchTerm').focus();
+}
 
 // this function runs on click of the search button
 function myFunction() {
@@ -23,11 +23,12 @@ if (emptyinput.value === ""){
             return response.json();
         })
         .then(function (response) {
-            console.log(response);
+          
 
             // if nothing found show the modal message
             if (response.length === 0) {
-                var message = "If you are not sure about the exact name of the breed, you can enter as little as few letters. For example *bull* and choose from the list"
+                var message = "We can't find enything. Please try another name or choose from the list below"
+                document.getElementById('searchTerm').disabled = true;
                 callModal(message);
             }
             //add new div elements to html DOM 
@@ -51,7 +52,7 @@ if (emptyinput.value === ""){
                      sessionStorage.clear();
                     element.target.style.color = 'red'
                     var targetindex = Number(element.target.id);
-                    console.log(element);
+                   
                     sessionStorage.setItem('breedinfo', JSON.stringify(response[targetindex]));
 
                     window.location.href = "./doginfo.html";
@@ -62,19 +63,32 @@ if (emptyinput.value === ""){
             //show modal message 
             // just call it if you need an alert and pass string message as a parameter
             function callModal(value) {
-                var messagecontainer = document.getElementById("modaltext");
-                messagecontainer.innertext = value;
+                
+                document.getElementById("modaltext").textContent = value;
                 var modal = document.getElementById("myModal");
                 var span = document.getElementsByClassName("close")[0];
+                 var inputvalue = document.getElementById('searchTerm').value;
                 //show modal
                 modal.style.display = "block";
                 //hide modal
                 span.onclick = function () {
                     modal.style.display = "none";
+                    
+                    var cutvalue = inputvalue.substring(0, inputvalue.length - 1);
+                    document.getElementById('searchTerm').disabled = false;
+                    document.getElementById('searchTerm').value = cutvalue;
+                    document.getElementById('searchTerm').focus();
+                    myFunction();
+                    
                 }
                 window.onclick = function (event) {
                     if (event.target === modal) {
                         modal.style.display = "none";
+                        var cutvalue = inputvalue.substring(0, inputvalue.length - 1);
+                    document.getElementById('searchTerm').disabled = false;
+                    document.getElementById('searchTerm').value = cutvalue;
+                    document.getElementById('searchTerm').focus();
+                    myFunction();
                     }
                 }
             }
