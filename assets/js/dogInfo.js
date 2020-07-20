@@ -77,6 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
             var b = response.query.pages[keys[0]].extract;
             console.log(a)
             console.log(b);
+            document.getElementById('info-card').innerText = fulldogname
             document.getElementById('dogimage').setAttribute("src", a);
             document.getElementById('dogtext').innerText = b;
         })
