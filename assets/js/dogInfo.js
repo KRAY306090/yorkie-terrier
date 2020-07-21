@@ -93,9 +93,9 @@ var videoSearch = function () {
 }
 
 var mainVid = function(id){
-    $('#videos').html(
+    $('#mainVid').html(
         `
-        <iframe width="560" height="315"src="http://www.youtube.com/embed/${id}" frameborder = "0" allowfullscreen></iframe>
+        <iframe width="800" height="600"src="http://www.youtube.com/embed/${id}" frameborder = "0" allowfullscreen></iframe>
      `
     );
 }
@@ -106,11 +106,11 @@ var resultsLoop = function(data) {
 
         var thumb =  item.snippet.thumbnails.medium.url; // change src
         var title = item.snippet.title; //change in h4 tags
-        var desc = item.snippet.description.substring(0,100) //change in p tag
+        var desc = item.snippet.description.substring(0,100); //change in p tag
+        var vid = item.id.videoId;
 
-
-        $('#videos').append(
-            ` <article>
+        $('#thumbnails').append(
+            ` <article class = "item" data-key="${vid}">
                 <img src="${thumb}" atl="" class = "thumb">
                 <div class = "details">
                     <h4>${title}</h4>
@@ -119,6 +119,10 @@ var resultsLoop = function(data) {
             </article>                    
             `
         )
+    })
+    $('#thumbnails').on('click', 'article', function(){
+        var id = $(this).attr('data-key');
+        mainVid(id);
     })
 }
     
