@@ -25,7 +25,7 @@ var discoverOtherBreed = function () {
             return response.json();
         })
         .then(function (data) {
-          
+          console.log(data)
 
             for (var i = 0; i < 10; i++) {
                 randomIndex = Math.floor(Math.random() * 172);
@@ -57,7 +57,7 @@ var discoverOtherBreed = function () {
 
     
 var wikiInfo = function() {
-    var fulldogname = breedobject.name.split(' ').join('%20')
+    var fulldogname = breedobject.name
 
     fetch(
         "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=1&prop=pageimages%7Cextracts&pilimit=20&exintro=5&explaintext=4&exsentences=4&exlimit=max&origin=*&gsrsearch=" + fulldogname
@@ -68,73 +68,64 @@ var wikiInfo = function() {
         })
         .then(function (response) {
             var keys = Object.keys(response.query.pages);
-            var a = response.query.pages[keys[0]].thumbnail.source;
-            var b = response.query.pages[keys[0]].extract;
-            console.log(a)
-            console.log(b);
+            var wikiThumbnail = response.query.pages[keys[0]].thumbnail.source;
+            var wikiText = response.query.pages[keys[0]].extract;
+            // console.log(a)
+            // console.log(b);
             document.getElementById('info-card').innerText = fulldogname
-            document.getElementById('dogimage').setAttribute("src", a);
-            document.getElementById('dogtext').innerText = b;
+            document.getElementById('dogimage').setAttribute("src", wikiThumbnail);
+            document.getElementById('dogtext').innerText = wikiText;
         })
-};
-
-
-    
-
-// videoSearch(apiKey, breed, 1)
-var apiKey = "AIzaSyAvPBSIiIgTwoAA8XqPnDNwOsaN0_9ckZA"
-var breed = breedobject.name
-var video = ""
-
-var videoSearch = function (key, search, maxResults) {
-    var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-    $("#videos").empty
-    $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
-        + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
-            console.log(data)
-
-    //         data.items.forEach(item => {
-                // video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder = "0" allowfullscreen></iframe>
-            // `
-
-                // console.log(video)
-                
-
-                //video placement
-
-   
-
-                video = `<iframe width="800" height="480" src="http://www.youtube.com/embed/GBZnnOe_n5g" frameborder = "0" allowfullscreen></iframe>`   
-         
-                $("#videos").append(video)
-
-                resultsLoop()
-            })
-        // })
 }
 
-// var resultsLoop = function(data) {
+var videoSearch = function () {
+    var apiKey = "AIzaSyAvPBSIiIgTwoAA8XqPnDNwOsaN0_9ckZA"
+    var breed = breedobject.name
+    var video = ""
+    $("#videos").empty
+    $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey
+        + "&type=video&part=snippet&order=viewCount&maxResults=5&q=" + breed, function (data) {
+            console.log(data);
+            var id = data.items[0].id.videoId
+            mainVid(id);
+            resultsLoop(data)
+            })
+}
 
-//     // $.each(data.items, function(i, item){
+var mainVid = function(id){
+    $('#videos').html(
+        `
+        <iframe width="560" height="315"src="http://www.youtube.com/embed/${id}" frameborder = "0" allowfullscreen></iframe>
+     `
+    );
+}
 
-//         // var thumb = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insider.com%2Fmost-popular-dog-breeds-2019-google-search&psig=AOvVaw2z8IDhLdAw2TjhDayq-Y0w&ust=1595359798820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjlq8PI3OoCFQAAAAAdAAAAABAJ" //item.snippet.thumbnail.medium.url; // change src
-//         // var title = "Title" //item.snippet.title; //change in h4 tags
-//         // var desc = "I am a description" //item.snippet.description.substring(0,100) //change in p tag
+var resultsLoop = function(data) {
+
+    $.each(data.items, function(i, item){
+
+        var thumb =  item.snippet.thumbnails.medium.url; // change src
+        var title = item.snippet.title; //change in h4 tags
+        var desc = item.snippet.description.substring(0,100) //change in p tag
 
 
-//         // $('#videos').append(
-//         //     ` <article>
-//         //         <img src="${thumb}" atl="" class = "thumb">
-//         //         <div class = "details">
-//         //             <h4>${title}</h4>
-//         //             <p>${desc}</p>
-//         //         </div>
-//         //     </article>                    
-//         //     `
-//         // )
-//     // })
-// }
+        $('#videos').append(
+            ` <article>
+                <img src="${thumb}" atl="" class = "thumb">
+                <div class = "details">
+                    <h4>${title}</h4>
+                    <p>${desc}</p>
+                </div>
+            </article>                    
+            `
+        )
+    })
+}
+    
+    
+
 
 loadDogInfo();
 discoverOtherBreed();
 wikiInfo();
+videoSearch();
