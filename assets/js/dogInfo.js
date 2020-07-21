@@ -95,7 +95,7 @@ var videoSearch = function () {
 var mainVid = function(id){
     $('#mainVid').html(
         `
-        <iframe width="800" height="600"src="http://www.youtube.com/embed/${id}" frameborder = "0" allowfullscreen></iframe>
+        <iframe width="100%" height="480"src="http://www.youtube.com/embed/${id}" frameborder = "0" allowfullscreen></iframe>
      `
     );
 }
