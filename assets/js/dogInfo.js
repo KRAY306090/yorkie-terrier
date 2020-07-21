@@ -1,9 +1,11 @@
 var breedListEl = document.querySelector("#breedList")
+
+ //pull object from session storage
+var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
+console.log(breedobject);
+
 // set all info to the page on load
-window.addEventListener('DOMContentLoaded', function () {
-    //pull object from session storage
-    var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-    
+var loadDogInfo = function () {
     // fill dog info area
     document.getElementById('dogname').innerText = breedobject.name;
     document.getElementById('height').innerText = "Height: " + breedobject.height.imperial + " inches";
@@ -13,22 +15,14 @@ window.addEventListener('DOMContentLoaded', function () {
     if (breedobject.temperament) {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
-    // For Mike to use
-    
-    var breed = breedobject.name
-    
-
-    videoSearch(apiKey, breed, 1)
-});
+};
 
 
 
-window.addEventListener('DOMContentLoaded', function () {
+var discoverOtherBreed = function () {
     fetch(
         `https://api.thedogapi.com/v1/breeds?api_key=74a8d6a7-fb77-4451-999a-01a85de265cc`
     )
-
-
         .then(function (response) {
             return response.json();
         })
@@ -83,21 +77,22 @@ window.addEventListener('DOMContentLoaded', function () {
         })
 
 
-});
+};
 
 
+    
 
-
-
-
-var apiKey = "AIzaSyD7nrLoufr8z3u4tc3PrAogdFA8EHy3ufI"
+// videoSearch(apiKey, breed, 1)
+var apiKey = "AIzaSyAvPBSIiIgTwoAA8XqPnDNwOsaN0_9ckZA"
+var breed = breedobject.name
 var video = ""
 
 var videoSearch = function (key, search, maxResults) {
-    // $("#videos").empty
-    // $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
-    //     + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
-    //         // console.log(data)
+    var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
+    $("#videos").empty
+    $.get("https://www.googleapis.com/youtube/v3/search?key=" + key
+        + "&type=video&part=snippet&order=viewCount&maxResults=" + maxResults + "&q=" + search, function (data) {
+            console.log(data)
 
     //         data.items.forEach(item => {
                 // video = `<iframe width="480" height="320" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder = "0" allowfullscreen></iframe>
@@ -115,28 +110,31 @@ var videoSearch = function (key, search, maxResults) {
                 $("#videos").append(video)
 
                 resultsLoop()
-            // })
+            })
         // })
 }
 
-var resultsLoop = function(data) {
+// var resultsLoop = function(data) {
 
-    // $.each(data.items, function(i, item){
+//     // $.each(data.items, function(i, item){
 
-        var thumb = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insider.com%2Fmost-popular-dog-breeds-2019-google-search&psig=AOvVaw2z8IDhLdAw2TjhDayq-Y0w&ust=1595359798820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjlq8PI3OoCFQAAAAAdAAAAABAJ" //item.snippet.thumbnail.medium.url; // change src
-        var title = "Title" //item.snippet.title; //change in h4 tags
-        var desc = "I am a description" //item.snippet.description.substring(0,100) //change in p tag
+//         // var thumb = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.insider.com%2Fmost-popular-dog-breeds-2019-google-search&psig=AOvVaw2z8IDhLdAw2TjhDayq-Y0w&ust=1595359798820000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjlq8PI3OoCFQAAAAAdAAAAABAJ" //item.snippet.thumbnail.medium.url; // change src
+//         // var title = "Title" //item.snippet.title; //change in h4 tags
+//         // var desc = "I am a description" //item.snippet.description.substring(0,100) //change in p tag
 
 
-        $('main').append(
-            ` <article>
-                <img src="${thumb}" atl="" class = "thumb">
-                <div class = "details">
-                    <h4>${title}</h4>
-                    <p>${desc}</p>
-                </div>
-            </article>                    
-            `
-        )
-    // })
-}
+//         // $('#videos').append(
+//         //     ` <article>
+//         //         <img src="${thumb}" atl="" class = "thumb">
+//         //         <div class = "details">
+//         //             <h4>${title}</h4>
+//         //             <p>${desc}</p>
+//         //         </div>
+//         //     </article>                    
+//         //     `
+//         // )
+//     // })
+// }
+
+loadDogInfo();
+discoverOtherBreed();
