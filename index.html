@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="searchPage">
+<body onload= searchCursor() class="searchPage">
 
     <header class="nav-bar has-background-warning">
         <div id="sitename" class="has-text-centered has-text-black is-size-1 has-text-weight-semibold"> Doggypedia <i class='fa fa-paw' aria-hidden='true'></i></div>
@@ -28,7 +28,7 @@
                 <p class="title has-text-black">Dog Search</p>
                 <p class="subtitle has-text-black">Please enter the breed.</p>
                 <p id="modaltext"></p>
-                <div><input type="text" oninput="myFunction()" id="searchTerm" value="" /></div>
+                <div><input type="text" oninput="myFunction()" autocomplete="off" id="searchTerm" value="" /></div>
                 <div class="has-text-centered" id="response-container"></div>
             </div>
 
