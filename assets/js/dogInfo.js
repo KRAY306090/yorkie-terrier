@@ -87,9 +87,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
 var apiKey = "AIzaSyD7nrLoufr8z3u4tc3PrAogdFA8EHy3ufI"
 var video = ""
 
@@ -128,7 +125,7 @@ var resultsLoop = function(data) {
         var desc = "I am a description" //item.snippet.description.substring(0,100) //change in p tag
 
 
-        $('main').append(
+        $('#list').append(
             ` <article>
                 <img src="${thumb}" atl="" class = "thumb">
                 <div class = "details">
