@@ -17,8 +17,6 @@ var loadDogInfo = function () {
     }
 };
 
-
-
 var discoverOtherBreed = function () {
     fetch(
         `https://api.thedogapi.com/v1/breeds?api_key=74a8d6a7-fb77-4451-999a-01a85de265cc`
@@ -50,14 +48,17 @@ var discoverOtherBreed = function () {
                     sessionStorage.setItem('breedinfo', JSON.stringify(data[targetindex]));
 
                     window.location.href = "./doginfo.html";
-                }
+                };
 
-            }
+            };
 
-        })
-        var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-        var fulldogname = breedobject.name.split(' ').join('%20')
-       
+        });
+};
+
+    
+var wikiInfo = function() {
+    var fulldogname = breedobject.name.split(' ').join('%20')
+
     fetch(
         "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=1&prop=pageimages%7Cextracts&pilimit=20&exintro=5&explaintext=4&exsentences=4&exlimit=max&origin=*&gsrsearch=" + fulldogname
 
@@ -75,8 +76,6 @@ var discoverOtherBreed = function () {
             document.getElementById('dogimage').setAttribute("src", a);
             document.getElementById('dogtext').innerText = b;
         })
-
-
 };
 
 
@@ -138,3 +137,4 @@ var videoSearch = function (key, search, maxResults) {
 
 loadDogInfo();
 discoverOtherBreed();
+wikiInfo();
