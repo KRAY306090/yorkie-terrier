@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         })
         var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-        var fulldogname = breedobject.name.split(' ').join('%20')
+        var fulldogname = breedobject.name.split(' ').join('%20');
         console.log(fulldogname);
     fetch(
         "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrlimit=1&prop=pageimages%7Cextracts&pilimit=20&exintro=5&explaintext=4&exsentences=4&exlimit=max&origin=*&gsrsearch=" + fulldogname
