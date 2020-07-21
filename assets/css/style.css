@@ -1,4 +1,7 @@
 /* modal message section */
+.searchPage {
+  background-image: url("../images/dog-tales-img.jpg");
+}
 
 .modal {
   display: none;
@@ -12,9 +15,7 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 /* Modal Content/Box */
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -22,110 +23,43 @@
   border: 1px solid #888;
   width: 80%;
 }
-
 /* The Close Button */
-
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover, .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
-.search-wrapper {
-  padding-top: 5px;
-  line-height: 1.2;
-  font-family: fantasy;
-  position: absolute;
-  margin: 14px;
-  width: 27%;
-  height: fit-content;
-  margin-right: 0;
-  border-radius: 10px;
-  text-align: center;
-  font-family: cursive;
-  color: rgb(59, 59, 59);
-  font-size: 20pt;
-  font-weight: 2000;
-  background-color: lightgray;
-}
-
-.nav-bar {
-  font-weight: 500;
-  position: sticky;
-  font-size: 40pt;
-  height: 90px;
-  background-color: #00d1b2;
-  border-bottom: solid 4px lightgray;
-  text-align: center;
-  color: white;
-  padding-top: 0;
-}
-
 #response-container {
-  text-justify: auto;
-  font-family: serif;
-  margin-top: 10px;
-  position: absolute;
-  height: 350px;
-  width: 92%;
-  max-height: 13em;
+  max-height: 13rem;
   overflow: auto;
-  margin-left: 10px;
-  
 }
-
-
-
-.new-div {
-  width: 100%;
-  color: rgb(0, 0, 0);
-  font-weight: 300;
-  border: solid rgb(92, 92, 92) 0.5px;
-  border-radius: 5px;
-  background-color: lightyellow;
-  margin-bottom: 3px;
+.center {
+  margin: 0 auto;
+  text-align: center;
 }
-
 #searchTerm {
   margin-bottom: 10px;
   margin-top: 10px;
   width: 80%;
   height: 35px;
   font-size: 20pt;
-  /* background-color: yellow;  */
 }
-
-.footer-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #00d1b2;
-  height: 50px;
-  width: 100%;
-  border-top: solid 3px lightgray;
+.opacity-low {
+  background-color: rgba(255, 255, 224, 0.8);
+  border: solid 1px black;
+  
 }
-
-.picture-container {
-  position: absolute;
-  right: 0;
-  height: 100%;
-  width: 70%;
-  background-image: url('../images/tree4.jpg');
-}
-
 #dogs-image {
   position: absolute;
   margin-right: 20px;
   border-left: solid 2px lightgray; 
 }
-
 .random-dog {
   display: flex;
   justify-content: center;
@@ -138,24 +72,15 @@
   text-align: center;
   font-size: 80%;
 }
-
 #dogtext{
 width: 300px;
 margin: 10px;
-
-
-   /* margin-top: 10px;
-  position: relative; */
-  /* max-height: 13em;
-  overflow: auto;  */
 }
-
 #dogimage{
 float: left;
 width: 100px;
 margin: 10px;
 }
-
 #dogtext-container{
    margin-top: 50px; 
   max-height: 20em;
