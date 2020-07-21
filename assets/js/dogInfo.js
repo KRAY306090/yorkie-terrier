@@ -110,9 +110,9 @@ var resultsLoop = function(data) {
         var vid = item.id.videoId;
 
         $('#thumbnails').append(
-            ` <article class = "item" data-key="${vid}">
+            ` <article class = "item mb-2" data-key="${vid}">
                 <img src="${thumb}" atl="" class = "thumb">
-                <div class = "details">
+                <div class = "details ml-3">
                     <h4>${title}</h4>
                     <p>${desc}</p>
                 </div>
