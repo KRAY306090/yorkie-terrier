@@ -1,7 +1,9 @@
 /* modal message section */
 .searchPage {
   background-image: url("../images/dog-tales-img.jpg");
+  
 }
+
 
 .modal {
   display: none;
