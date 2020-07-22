@@ -11,57 +11,47 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body onload= searchCursor() class="searchPage">
+<body onload=searchCursor()>
+    <div class="searchPage content">
 
-    <header class="nav-bar has-background-warning">
-        <div id="sitename" class="has-text-centered has-text-black is-size-1 has-text-weight-semibold"> Doggypedia <i class='fa fa-paw' aria-hidden='true'></i></div>
-    </header>
+        <header class="nav-bar has-background-warning">
+            <div id="sitename" class="has-text-centered has-text-black is-size-1 has-text-weight-semibold"> Doggypedia
+                <i class='fa fa-paw' aria-hidden='true'></i></div>
+        </header>
+        <div class="section"></div>
+        <div class="section"></div>
+        <!--Search page start-->
+        <div class="tile is vertical is-ancestor">
+            <div class="tile is-4 is-parent center">
+                <div class="tile is-child box has-text-centered opacity-low">
 
-    <div class="section"></div>
-    <div class="section"></div>
-
-    <!--Search page start-->
-    <div class="tile is vertical is-ancestor">
-        <div class="tile is-4 is-parent center">
-            <div class="tile is-child box has-text-centered opacity-low">
-
-                <p class="title has-text-black">Dog Search</p>
-                <p class="subtitle has-text-black">Please enter the breed.</p>
-                <p id="modaltext"></p>
-                <div><input type="text" oninput="myFunction()" autocomplete="off" id="searchTerm" value="" /></div>
-                <div class="has-text-centered" id="response-container"></div>
+                    <p class="title has-text-black">Dog Search</p>
+                    <p class="subtitle has-text-black">Please enter the breed.</p>
+                    <p id="modaltext"></p>
+                    <div><input type="text" oninput="myFunction()" autocomplete="off" id="searchTerm" value="" /></div>
+                    <div class="has-text-centered" id="response-container"></div>
+                </div>
             </div>
-
-            <!--
-    <div class="tile is-4 is-parent">
-    -->
-
-
         </div>
-        <!-- </div> -->
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Could not find anything. Please change the name and try again</p>
+            </div>
+        </div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <div class="section"></div>
+        <footer class="footer has-background-warning">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Doggypedia</strong> by Latalia, Bruce, Alex, Mike and Kennadee
+                </p>
+            </div>
+        </footer>
     </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Could not find anything. Please change the name and try again</p>
-        </div>
-    </div>
-    <!-- </div> -->
-    <!-- <section class="picture-container column">
-        
-        <img id="dogs-image" src="assets/images/dog-tales-img.jpg" alt="">
-    </section>
--->
-    <div class="section"></div>
-    <div class="section"></div>
-    <footer class="footer has-background-warning">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Doggypedia</strong> by Latalia, Bruce, Alex, Mike and Kennadee
-            </p>
-        </div>
-    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 
