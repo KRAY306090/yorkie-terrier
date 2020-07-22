@@ -1,10 +1,9 @@
-/* modal message section */
+/* Search Page Styles */
 .searchPage {
   background-image: url("../images/dog-tales-img.jpg");
   
 }
-
-
+/* modal message section */
 .modal {
   display: none;
   position: fixed;
@@ -37,6 +36,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+/* search box styles */
 #response-container {
   max-height: 13rem;
   overflow: auto;
@@ -57,6 +57,7 @@
   border: solid 1px black;
   
 }
+/* DogInfo Specific Styles */
 #dogs-image {
   position: absolute;
   margin-right: 20px;
@@ -75,7 +76,6 @@
   font-size: 80%;
 }
 #dogtext{
-width: 300px;
 margin: 10px;
 }
 #dogimage{
@@ -90,12 +90,8 @@ margin: 10px;
 border: solid gray 1px;
 width: fit-content;
 }
-
-
-
 article {
   display: flex;
-  
 }
 .thumb{
   height: 100px;
@@ -103,7 +99,6 @@ article {
 .details h4{
 font-weight: bold;
 }
-
 .details p {
 color: grey;
 font-size:0.7rem;
