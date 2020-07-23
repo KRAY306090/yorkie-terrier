@@ -33,7 +33,7 @@ html, .searchPage {
   background-color: lavender;
 }
 
-.footer {
+#firstpage-footer {
   position: absolute;
   bottom: 0;
   height: 100px;
