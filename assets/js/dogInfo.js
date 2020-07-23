@@ -15,6 +15,9 @@ var loadDogInfo = function () {
     if (breedobject.temperament) {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
+    if(breedobject){
+        videoSearch();
+    }
    
 };
 
@@ -83,7 +86,6 @@ var videoSearch = function () {
     var apiKey = "AIzaSyBN4hsN8UlvoNmapa988p9uC4melNrmcGM"
     var breed = breedobject.name
     var video = ""
-    if(breed){
         $("#videos").empty
         $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey
             + "&type=video&part=snippet&order=viewCount&maxResults=5&q=" + breed, function (data) {
@@ -92,7 +94,6 @@ var videoSearch = function () {
                 mainVid(id);
                 resultsLoop(data)
             })
-        }
 }
 
 var mainVid = function(id){
@@ -135,4 +136,3 @@ var resultsLoop = function(data) {
 loadDogInfo();
 discoverOtherBreed();
 wikiInfo();
-videoSearch();
