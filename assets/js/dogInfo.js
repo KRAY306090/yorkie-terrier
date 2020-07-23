@@ -2,7 +2,7 @@ var breedListEl = document.querySelector("#breedList")
 
  //pull object from session storage
 var breedobject = JSON.parse(window.sessionStorage.getItem('breedinfo'));
-console.log(breedobject);
+// console.log(breedobject);
 
 // set all info to the page on load
 var loadDogInfo = function () {
@@ -15,6 +15,10 @@ var loadDogInfo = function () {
     if (breedobject.temperament) {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
+    if(breedobject){
+        videoSearch();
+    }
+   
 };
 
 var discoverOtherBreed = function () {
@@ -25,7 +29,7 @@ var discoverOtherBreed = function () {
             return response.json();
         })
         .then(function (data) {
-          console.log(data)
+        //   console.log(data)
 
             for (var i = 0; i < 10; i++) {
                 randomIndex = Math.floor(Math.random() * 172);
@@ -79,16 +83,16 @@ var wikiInfo = function() {
 }
 
 var videoSearch = function () {
-    var apiKey = "AIzaSyAvPBSIiIgTwoAA8XqPnDNwOsaN0_9ckZA"
+    var apiKey = "AIzaSyBN4hsN8UlvoNmapa988p9uC4melNrmcGM"
     var breed = breedobject.name
     var video = ""
-    $("#videos").empty
-    $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey
-        + "&type=video&part=snippet&order=viewCount&maxResults=5&q=" + breed, function (data) {
-            console.log(data);
-            var id = data.items[0].id.videoId
-            mainVid(id);
-            resultsLoop(data)
+        $("#videos").empty
+        $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey
+            + "&type=video&part=snippet&order=viewCount&maxResults=5&q=" + breed, function (data) {
+                //  console.log(data);
+                var id = data.items[0].id.videoId
+                mainVid(id);
+                resultsLoop(data)
             })
 }
 
@@ -132,4 +136,3 @@ var resultsLoop = function(data) {
 loadDogInfo();
 discoverOtherBreed();
 wikiInfo();
-videoSearch();

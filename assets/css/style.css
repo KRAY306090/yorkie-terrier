@@ -80,7 +80,6 @@ html, .searchPage {
   text-decoration: none;
   cursor: pointer;
 }
-
 #response-container {
   max-height: 13rem;
   overflow: auto;
@@ -104,7 +103,6 @@ html, .searchPage {
   background-color: rgba(255, 255, 224, 0.8);
   border: solid 1px black;
 }
-
 #dogs-image {
   position: absolute;
   margin-right: 20px;
@@ -123,10 +121,8 @@ html, .searchPage {
   text-align: center;
   font-size: 80%;
 }
-
-#dogtext {
-  width: 300px;
-  margin: 10px;
+#dogtext{
+margin: 10px;
 }
 
 #dogimage {
@@ -142,7 +138,6 @@ html, .searchPage {
   border: solid gray 1px;
   width: fit-content;
 }
-
 article {
   display: flex;
 }
@@ -154,7 +149,6 @@ article {
 .details h4 {
   font-weight: bold;
 }
-
 .details p {
   color: grey;
   font-size: 0.7rem;

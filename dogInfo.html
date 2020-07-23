@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dog Information</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -13,35 +13,25 @@
 
 <body>  
     <div class="bio-wrapper">
-        <div class="navbar level has-background-primary">
-            <div class="navbar-brand has-text-white">
-                <h1 id="dogname" class="ml-3 is-size-1">Labradoodle</h1>
+        <div class="navbar level has-background-warning">
+            <div class="navbar-brand">
+                <h1 id="dogname" class="ml-3 is-size-1"></h1>
             </div>
-            <!-- <div class="is-pulled-right">
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input is-small" type="text" placeholder="Dog Breed">
-                    <span class="icon is-small is-right">
-                      <i class="fa fa-paw" aria-hidden="true"></i>
-                    </span>
-                  </div>
-            </div> -->
         </div>
         <div class="columns">
             <div class="column is-8 ml-4">
                 <div class = "columns">
                     <div class = "column ml-4" id = "mainVid">
-
                     </div>
                 </div>
                 <div class = "columns">
-                    <div class = "column ml-4" id = "thumbnails">
-
+                    <div class = "column ml-4" id = "thumbnails">  
                     </div>
                 </div>
             </div>
             <div class="column is-4 section">
                 <!-- Wikipedia Content -->   
-                <div class = "card mb-3">
+                <div class = "card mb-3 mr-2">
                     <h2 class = "is-size-5 card-header has-text-centered" id = "info-card"> </h2>
                     <div class = "card-content" id="doginfo-container">
                         <img id="dogimage"></img>
@@ -49,7 +39,7 @@
                     </div>
                 </div>
                 <!-- Stats -->
-                <div class="card mb-3">
+                <div class="card mb-3 mr-2">
                     <h2 class="is-size-5 card-header ">Stats</h2>
                     <div class="card-content">
                         <p id="height"></p>
@@ -59,30 +49,25 @@
                     </div>
                 </div>
                 <!-- Other Breeds List -->
-                <div class="card mb-3">
+                <div class="card mb-3 mr-2">
                     <h2 class="is-size-5 card-header level"><i class='fa fa-paw' aria-hidden='true'></i> Discover other Breeds <i
                             class='fa fa-paw' aria-hidden='true'></i></h2>
-
                     <ul id="breedList" class="card-content">
-
                     </ul>
                 </div>
             </div>
         </div>
-        <footer class="footer has-text-white has-background-primary">
-              <p>
-                <strong>Doggypedia</strong> </br>
-                Created by: LaTalia Gillespie, Bruce Phimmasone, Mike, Portu, Kennadee Ray & Alexander Vasiilkov </br>
-                2020
-              </p>
+        <footer class="footer has-background-warning">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Doggypedia</strong> by Latalia, Bruce, Alex, Mike and Kennadee
+                </p>
             </div>
-          </footer>
+        </footer>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/dogInfo.js"></script>
-
 </body>
 
 </html>
