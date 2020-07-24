@@ -1,9 +1,47 @@
-/* Search Page Styles */
-.searchPage {
-  background-image: url("../images/dog-tales-img.jpg");
-  
+/* set background, footer, header to work for all screen sizes */
+html, .searchPage {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+.searchPage {
+  position: relative;
+}
+
+.picture-container {
+  top: 70px;
+  bottom: 100px;
+  background-image: url("../images/dog-tales-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-bar {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+}
+
+#search-container {
+  margin-top: 4em;
+}
+
+.new-div:hover {
+  background-color: lavender;
+}
+
+#firstpage-footer {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+
 /* modal message section */
+
 .modal {
   display: none;
   position: fixed;
@@ -16,7 +54,9 @@
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 /* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -24,27 +64,33 @@
   border: 1px solid #888;
   width: 80%;
 }
+
 /* The Close Button */
+
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+
+/* search box style here */
 .close:hover, .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-/* search box styles */
 #response-container {
   max-height: 13rem;
   overflow: auto;
 }
+
+/* second page style */
 .center {
   margin: 0 auto;
   text-align: center;
 }
+
 #searchTerm {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -52,17 +98,17 @@
   height: 35px;
   font-size: 20pt;
 }
+
 .opacity-low {
   background-color: rgba(255, 255, 224, 0.8);
   border: solid 1px black;
-  
 }
-/* DogInfo Specific Styles */
 #dogs-image {
   position: absolute;
   margin-right: 20px;
-  border-left: solid 2px lightgray; 
+  border-left: solid 2px lightgray;
 }
+
 .random-dog {
   display: flex;
   justify-content: center;
@@ -78,28 +124,32 @@
 #dogtext{
 margin: 10px;
 }
-#dogimage{
-float: left;
-width: 100px;
-margin: 10px;
+
+#dogimage {
+  float: left;
+  width: 100px;
+  margin: 10px;
 }
-#dogtext-container{
-   margin-top: 50px; 
+
+#dogtext-container {
+  margin-top: 50px;
   max-height: 20em;
-  overflow: auto;  
-border: solid gray 1px;
-width: fit-content;
+  overflow: auto;
+  border: solid gray 1px;
+  width: fit-content;
 }
 article {
   display: flex;
 }
-.thumb{
+
+.thumb {
   height: 100px;
 }
-.details h4{
-font-weight: bold;
+
+.details h4 {
+  font-weight: bold;
 }
 .details p {
-color: grey;
-font-size:0.7rem;
+  color: grey;
+  font-size: 0.7rem;
 }

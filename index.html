@@ -11,20 +11,21 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body onload=searchCursor()>
-    <div class="searchPage content">
+<body onload=searchCursor() class="searchPage">
 
-        <header class="nav-bar has-background-warning">
-            <div id="sitename" class="has-text-centered has-text-black is-size-1 has-text-weight-semibold"> Doggypedia
-                <i class='fa fa-paw' aria-hidden='true'></i></div>
-        </header>
-        <div class="section"></div>
-        <div class="section"></div>
-        <!--Search page start-->
-        <div class="tile is vertical is-ancestor">
+    <!-- header bar -->
+    <header class="nav-bar has-background-warning">
+        <div id="sitename" class="has-text-centered has-text-black is-size-1 has-text-weight-semibold"> Doggypedia <i
+                class='fa fa-paw' aria-hidden='true'></i></div>
+    </header>
+
+    <!-- this section contains background image modal and search box -->
+    <section class="picture-container column">
+
+        <!--Search box-->
+        <div id="search-container" class="tile is vertical is-ancestor">
             <div class="tile is-4 is-parent center">
                 <div class="tile is-child box has-text-centered opacity-low">
-
                     <p class="title has-text-black">Dog Search</p>
                     <p class="subtitle has-text-black">Please enter the breed.</p>
                     <p id="modaltext"></p>
@@ -40,18 +41,16 @@
                 <p>Could not find anything. Please change the name and try again</p>
             </div>
         </div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <div class="section"></div>
-        <footer class="footer has-background-warning">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>Doggypedia</strong> by Latalia, Bruce, Alex, Mike and Kennadee
-                </p>
-            </div>
-        </footer>
-    </div>
+    </section>
+
+    <!-- footer bar -->
+    <footer id="firstpage-footer" class="footer has-background-warning">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Doggypedia</strong> by Latalia, Bruce, Alex, Mike and Kennadee
+            </p>
+        </div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 
