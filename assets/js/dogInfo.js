@@ -85,12 +85,13 @@ var wikiInfo = function() {
 var videoSearch = function () {
     var apiKey = "AIzaSyBN4hsN8UlvoNmapa988p9uC4melNrmcGM"
     var breed = breedobject.name
-    var video = ""
+    console.log("test API call")
         $("#videos").empty
-        $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey
-            + "&type=video&part=snippet&order=viewCount&maxResults=5&q=" + breed, function (data) {
-                //  console.log(data);
+        console.log("clear vid");
+        $.get(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&type=video&part=snippet&maxResults=5&q=${breed}`, function (data) {
+                 console.log(data);
                 var id = data.items[0].id.videoId
+                console.log(id)
                 mainVid(id);
                 resultsLoop(data)
             })
@@ -105,7 +106,7 @@ var mainVid = function(id){
 }
 
 var resultsLoop = function(data) {
-
+console.log("results loop")
     $.each(data.items, function(i, item){
 
         var thumb =  item.snippet.thumbnails.medium.url; // change src
@@ -113,6 +114,7 @@ var resultsLoop = function(data) {
         var desc = item.snippet.description.substring(0,100); //change in p tag
         var vid = item.id.videoId;
 
+        console.log(vid);
         $('#thumbnails').append(
             ` <article class = "item mb-2" data-key="${vid}">
                 <img src="${thumb}" atl="" class = "thumb">
