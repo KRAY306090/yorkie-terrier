@@ -83,7 +83,7 @@ var wikiInfo = function() {
 }
 
 var videoSearch = function () {
-    var apiKey = "AIzaSyBN4hsN8UlvoNmapa988p9uC4melNrmcGM"
+    // var apiKey = "AIzaSyBN4hsN8UlvoNmapa988p9uC4melNrmcGM"
     var breed = breedobject.name
     console.log("test API call")
         $("#videos").empty
