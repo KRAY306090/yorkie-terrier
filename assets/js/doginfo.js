@@ -16,7 +16,7 @@ var loadDogInfo = function () {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
     if(breedobject){
-        videoSearch();
+        // videoSearch();
     }
    
 };
