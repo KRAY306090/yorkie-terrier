@@ -15,4 +15,5 @@ __API(s)__
 
 __Images__
 
-<img src="assets/images/cover.png" width="500">
+<img src="./assets/images/cover.png" width="500">
+<img src="./assets/images/cover/png" width="500">
