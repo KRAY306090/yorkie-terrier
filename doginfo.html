@@ -13,19 +13,19 @@
 
 <body>  
     <div class="bio-wrapper">
-        <div class="navbar level has-background-warning">
+        <nav class="navbar level has-background-warning" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <h1 id="dogname" class="ml-3 is-size-1"></h1>
-                <button class="button is-success is-outlined has-text-centered has-text-black is-size-5 has-text-weight-semibold" id="go-back" onclick="history.go(-1)">Doggypedia
-                <!-- <span class="has-text-centered has-text-black is-size-2 has-text-weight-semibold"> -->
-                    <i class='fa fa-paw' aria-hidden='true'></i>
-                </span>
-
-                
-                
-                </button>
+              <a class="button navbar-item is-warning" onclick="history.go(-1)">
+                <strong> Doggypedia</strong>
+                <i class='fa fa-paw' aria-hidden='true'></i>
+              </a>
             </div>
-        </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <h1 id="dogname"></h1>
+                </div>
+            </div>
+        </nav>
         <div class="columns">
             <div class="column is-8 ml-4">
                 <div class = "columns">
