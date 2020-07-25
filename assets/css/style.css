@@ -153,3 +153,11 @@ article {
   color: grey;
   font-size: 0.7rem;
 }
+#go-back{
+  position: absolute;
+  margin: 10px;
+  right: 0;
+}
+i{
+  margin-left: 10px;
+}
