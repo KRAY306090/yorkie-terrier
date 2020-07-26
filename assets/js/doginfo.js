@@ -16,7 +16,7 @@ var loadDogInfo = function () {
         document.getElementById('temperament').innerText = "Temperament: " + breedobject.temperament;
     }
     if(breedobject){
-        // videoSearch();
+        videoSearch();
     }
    
 };
@@ -83,7 +83,7 @@ var wikiInfo = function() {
 }
 
 var videoSearch = function () {
-    var apiKey = "AIzaSyAfRE1QUIIgx_s_HgLgkhei47vkYm8t3_I"
+    var apiKey = "AIzaSyDejqOmOUn9sdc7na-sRePx47hJc6zO5Bc"
     var breed = breedobject.name
     console.log("test API call")
         $("#videos").empty
