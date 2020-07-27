@@ -83,7 +83,7 @@ var wikiInfo = function() {
 }
 
 var videoSearch = function () {
-    var apiKey = "AIzaSyDejqOmOUn9sdc7na-sRePx47hJc6zO5Bc"
+    var apiKey = "AIzaSyDOepOzoVtcGpEUDSOM5PVt_nTi-O83m_k"
     var breed = breedobject.name
     console.log("test API call")
         $("#videos").empty
@@ -135,6 +135,8 @@ console.log("results loop")
     
 
 
-loadDogInfo();
+loadDogInfo(
+    console.log("test")
+);
 discoverOtherBreed();
 wikiInfo();
